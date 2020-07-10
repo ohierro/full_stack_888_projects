@@ -6,10 +6,12 @@ public class FirstSecondWeek {
 
         // VARS
         int intVariable;
-        int byteVariable = 3;
+        byte byteVariable = 3;
+        long longValue = 18l;
         float floatValue = 3.0f;
         double doubleValue = 3.0;
         char charValue = 'c'; // or 127 or 0x16
+        boolean booleanValue = true;
 
         // assign values
         intVariable = 3;
