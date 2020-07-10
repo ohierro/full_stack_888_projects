@@ -16,9 +16,8 @@ public class FirstSecondWeek {
         // assign values
         intVariable = 3;
 
-        // read values
+        // print values
         System.out.println(intVariable);
-
 
         // STRING
         String msg = "Hola mundo";
@@ -28,23 +27,24 @@ public class FirstSecondWeek {
 
         // CHAR ARRAY
         char[] msgBytes = msg.toCharArray();
-        for (int i = 0; i<msgBytes.length; i++) {
+        for (int i = msgBytes.length - 1; i >= 0; i--) {
             System.out.println(msgBytes[i]);
         }
 
         // String from array
         char[] newMsgBytes = new char[] { 'h', 'e', 'l', 'l', 'l', 'o' };
         String secondMsg = new String(newMsgBytes);
+        System.out.println(newMsgBytes);
         System.out.println(secondMsg);
 
         String firstString = "hello";
         String secondString = "hello";
         System.out.println("First string == Second string? " + (firstString == secondString));
 
-        String thirdString = new String("hello");
+        String thirdString = new String(secondString);
         System.out.println("First string == Third string? " + (firstString == thirdString));
         System.out.println("First string == Third string? " + (firstString.equals(thirdString)));
-
+        System.out.println(thirdString.equals("hello"));
 
         /*
             ARRAY DEFINITION
@@ -65,6 +65,7 @@ public class FirstSecondWeek {
 
         int[] values = new int[] { 1, 2, 3, 4, 5 };
         for (int i = 0; i < values.length; i++) {
+            values[i] += 3;
             System.out.println(values[i]);
         }
 
@@ -145,7 +146,7 @@ public class FirstSecondWeek {
         System.out.println("== START ==");
         for (int i = 0; i < values.length; i++) {
             System.out.println(i);
-            if (values[i] == 3) {
+            if (values[i] == 5) {
                 break;
             }
         }
@@ -224,11 +225,18 @@ public class FirstSecondWeek {
                 break;
         }
 
-
-
         // ELVIS OPERATOR
         int aValor = 5;
         String resultado = aValor > 3 ? "Mayor que 3" : "Menor que 3";
+        boolean isMayor3 = aValor > 3 ? aValor > 5 ? true : false : false;
+
+        // expresion ? si true : si false;
+
+        if (aValor > 3) {
+            resultado = "Mayor que 3";
+        } else {
+            resultado = "Menor que 3";
+        }
 
         System.out.println(resultado);
     }
