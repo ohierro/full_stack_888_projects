@@ -14,4 +14,15 @@ public class ThirdWeek {
             return null;
         }
     }
+
+    public int[] readIntsFromFile(String path) {
+        try {
+            int[] ints = Files.lines(Paths.get(path))
+                    .mapToInt(Integer::parseInt).toArray();
+
+            return ints;
+        } catch (IOException e) {
+            return null;
+        }
+    }
 }
