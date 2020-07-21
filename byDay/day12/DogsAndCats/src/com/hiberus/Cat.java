@@ -3,6 +3,7 @@ package com.hiberus;
 public class Cat {
     public String name;
     public int lifes;
+    public boolean tieneCollar;
 
     public Cat() {
         lifes = 7;

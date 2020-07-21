@@ -1,7 +1,21 @@
 package com.hiberus;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
+        Car cocheOliver = new Car(50);
+        cocheOliver.llenar();
+        cocheOliver.viajar(200);
+        int cuantoFuel = cocheOliver.getFuel();
+
+        Scanner scanner = new Scanner(System.in);
+        int valor = 40;
+
+        Car cochePepito = new Car();
+        cochePepito.repostar(valor);
+        cochePepito.viajar(20);
+
 	    // write your code here
         Dog pepe = new Dog();
         pepe.name = "Pepe";
