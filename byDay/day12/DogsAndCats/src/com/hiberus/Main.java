@@ -4,17 +4,22 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Car cocheOliver = new Car(50);
+        Car cocheOliver = new Car();
         cocheOliver.llenar();
         cocheOliver.viajar(200);
         int cuantoFuel = cocheOliver.getFuel();
+        System.out.println(cocheOliver.toString());
 
         Scanner scanner = new Scanner(System.in);
         int valor = 40;
 
         Car cochePepito = new Car();
-        cochePepito.repostar(valor);
+        cochePepito.repostar(40);
         cochePepito.viajar(20);
+        int speed = cochePepito.getSpeed();
+
+        cochePepito.llenar();
+        System.out.println("Deposito lleno");
 
 	    // write your code here
         Dog pepe = new Dog();
